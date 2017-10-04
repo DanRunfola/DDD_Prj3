@@ -1,0 +1,47 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage{fullpage} % changes the margin
+\usepackage{listings}
+
+\begin{document}
+\noindent
+\large\textbf{Data Driven Decisionmaking} \hfill \textbf{Project 3} \\
+
+\section*{Integrating Disparate Data Sources}
+Much of what a Data Scientist accomplishes is due to an ability to integrate disparate data sources - i.e., sources of information that were gathered in different ways or by different parties but contain information that would be useful if they are used in the same analysis.  In this analysis, you will be using all of the skills you've learned to date to exam the question:\\
+What is the best model you can fit to predict conflict in Syria?
+
+\section{Project Deliverables}
+You will need to turn in three deliverables as a part of this project:\\
+(1) A 3-page report summarizing your findings, including the following elements:
+\begin{itemize}
+\item Summary of Findings (1 paragraph summarizing everything you did and the key take-away)
+\item Figure(s) detailing your findings
+\item Data and Methods, with enough information for another practitioner to reproduce your approach (2-3 paragraphs).  
+\item Results, with a written description of any tables or figures you produce (1-2 paragraphs)
+\item Table(s) detailing your findings as necessary
+\item A discussion and conclusion, covering limitations of your approach, take-aways, and next steps. (1-2 paragraphs)
+\item A bibliography with any literature you cite.
+\end{itemize}
+(2) A brief one-paragraph description of the code you used to produce 1 and 2.\\
+
+\subsection{Getting the Data}
+\subsubsection{Conflict Data}
+Unlike previous projects, how you define conflict will be left to you; and, accordingly, selecting the appropriate dataset will also be left to you.  Examples of what you might choose could include:\\
+UCDP - http://ucdp.uu.se/ \\
+ACLED - https://www.acleddata.com/ \\
+
+Make sure you read the codebooks and documentation that go along with the dataset you choose, as it will be very important you understand explicitly how you are defining your conflict variable.  Further, you will need to choose how to manipulate the data that you choose - i.e., will you create counts of events within geographic areas?  Will you create a binary indicating if conflict occurred?  Defend your choices.
+
+\subsubsection{Ancillary Data}
+Ultimately you will be building a model that seeks to predict conflict on the basis of other data - i.e., trends in the economy, the location of natural resources, or other elements you believe might increase the level of conflict in a region.  Using the techniques you learned in project 2, you should choose one geographic entity (i.e., clinics) to scrape information from google maps on to combine with your conflict dataset.  You will then choose a set of variables from the geoquery.org tool to use as other predictors.  Again, make sure you understand the metadata, and what each element of your data is measuring!
+
+\subsubsection{Modeling}
+Unlike other projects, in this project we will be examining the accuracy of your modeling efforts - in particular, under assumptions of uncertainty.  Using python, you will fit (at least) two different types of models.  While you can choose different models, the example provides the tools for fitting a traditional linear model and a machine learning model called a decision tree.  You will contrast the accuracy of these models over thousands of iterations, including uncertainty in your ancillary variables as well as conflict outcome variables.  This will require parallelization of your code.
+
+\section{Stretch Goals}
+These goals are optional, and worth a very small amount (up to 5\% total of your assignment grade for all goals in total) of extra credit.  Completing any one stretch goal gives you the opportunity to receive all 5 points of extra credit.\\
+(1) Scrape directly from a third party website, instead of using the Google API.\\
+(2)Conduct your analysis at multiple geographic scales using different census units and contrast your results.\\
+(3) Conduct all spatial analysis steps of this assignment in python, rather than in Q.
+
+\end{document}
